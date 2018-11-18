@@ -3,7 +3,6 @@
 #include <Arduino.h>
 #include "cardio.h"
 #include "Heart.h"
-#include "param.h"
 
 int valeurPrecedente = 0;
 long tempsPrecedent = 0;
@@ -25,10 +24,10 @@ void pouls(){
                 Serial.print(BPM,0); // envoyer la valeur du pouls au port serie
                 Serial.print(";"); // séparer le BPM du temps écoulé avec ;
                 Serial.println(tempsEcoule); //envoyer la valeur du temps écoulé
-                lightEmUp(option, option2, BPM, 100); //appel la fonction lightEmUp de Heart.ino pour faire clignoter le module coeur en fonction du BPM calculé et des options choisies dans param.h
                 tempsPrecedent = tempsDetection; //mets tempsDetection dans tempsPrecedent pour la comparaison des deux dans le loop
             }
         }
     }
     valeurPrecedente = valeurActuelle; //mets valeurActuelle dans valeurPrecedente pour la comparaison des deux dans le loop
+    return BPM;
 }
