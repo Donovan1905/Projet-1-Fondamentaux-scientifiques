@@ -14,6 +14,6 @@ void setup(){
 
 void loop(){
 
-    pouls(); //run the pouls() function from cardio.c (which contains the function to make the heart module go
+    lightEmUp(option, option2, pouls(), 100);
 
 }
