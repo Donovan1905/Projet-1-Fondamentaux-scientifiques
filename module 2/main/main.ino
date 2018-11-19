@@ -2,7 +2,6 @@
 
 #include "LEDOptionFunc.h"
 #include "Heart.h"
-#include "cardio.h"
 #include "param.h"
 
 void setup(){
@@ -15,6 +14,6 @@ void setup(){
 
 void loop(){
 
-    lightEmUp(option, option2, pouls(), 100); //run the pouls() function from cardio.c (which contains the function to make the heart module go
+    lightEmUp(option, option2, 90, 100); //run the pouls() function from cardio.c (which contains the function to make the heart module go
 
 }
